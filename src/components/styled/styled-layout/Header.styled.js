@@ -25,6 +25,16 @@ export const StyledNavElements = styled.ul`
   display: flex;
   gap: 15px;
   list-style-type: none;
+
+  & a {
+    color: white;
+    text-decoration: none;
+    transition: color 100ms ease-in;
+  }
+
+  & a:hover {
+    color: #ff5d5d;
+  }
 `;
 
 export const StyledLogo = styled.h1`

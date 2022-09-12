@@ -1,10 +1,12 @@
+import { NavLink } from 'react-router-dom';
+
 import {
   StyledHeader,
   StyledNav,
   StyledNavElements,
   StyledLogo,
   StyledSocials,
-} from './styled/Header.styled';
+} from './styled/styled-layout/Header.styled';
 
 export default function Header() {
   return (
@@ -17,11 +19,21 @@ export default function Header() {
         </div>
 
         <StyledNavElements>
-          <li>Home</li>
-          <li>Sklep</li>
-          <li>Informacje</li>
-          <li>O nas</li>
-          <li>Kontakt</li>
+          <li>
+            <NavLink to={'/'}>Home</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/shop'}>Sklep</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/info'}>Informacje</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/about'}>O nas</NavLink>
+          </li>
+          <li>
+            <NavLink to={'/contact'}>Kontakt</NavLink>
+          </li>
         </StyledNavElements>
 
         <StyledSocials>
