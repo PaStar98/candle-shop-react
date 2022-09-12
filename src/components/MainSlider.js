@@ -5,7 +5,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
 import { StyledButton } from './styled/Button.styled';
-import { StyledSlider } from './styled/MainSlider.styled';
+import { StyledSlider, StyledSliderContent } from './styled/MainSlider.styled';
 // test
 export default function MainSlider() {
   return (
@@ -21,15 +21,35 @@ export default function MainSlider() {
         // onSwiper={(swiper) => console.log(swiper)}
       >
         <SwiperSlide className={'slider-item s1'}>
-          <h1>hello world</h1>
+          <StyledSliderContent>
+            <h2>Wiosenny konkurs!</h2>
+            <p>
+              Polub nasz fanpage na Facebook i zgarnij nagrody! Szczegóły
+              konkursu podane w wyróżnionym poście!
+            </p>
+            <StyledButton>ZOBACZ</StyledButton>
+          </StyledSliderContent>
         </SwiperSlide>
 
         <SwiperSlide className={'slider-item s2'}>
-          <h1>hello world</h1>
+          <StyledSliderContent>
+            <h2>Promocje - czas start!</h2>
+            <p>
+              Odwiedź nasz sklep i zobacz naszą oferte - nowe garunki już są!
+            </p>
+            <StyledButton>ZOBACZ</StyledButton>
+          </StyledSliderContent>
         </SwiperSlide>
 
         <SwiperSlide className={'slider-item s3'}>
-          <h1>hello world</h1>
+          <StyledSliderContent>
+            <h2>Bądź razem z nami!</h2>
+            <p>
+              Odwiedź nasz Instagram, zacznij go obserwować i bądź na czasie z
+              naszą ofertą!
+            </p>
+            <StyledButton>ZOBACZ</StyledButton>
+          </StyledSliderContent>
         </SwiperSlide>
       </Swiper>
     </StyledSlider>

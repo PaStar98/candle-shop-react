@@ -32,4 +32,84 @@ export const StyledSlider = styled.header`
   & .s3 {
     background-image: url('https://images3.alphacoders.com/665/665837.jpg');
   }
+
+  /* ============== SWIPER ============== */
+
+  /* ============ NAVIGATION ============ */
+  & .swiper-button-prev,
+  .swiper-button-next {
+    background-color: #666;
+    opacity: 0.7;
+    border-radius: 50%;
+    padding: 25px;
+    transition: background-color, 150ms linear;
+  }
+
+  & .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+    background-color: white;
+  }
+
+  & .swiper-button-prev::after,
+  .swiper-button-next::after {
+    color: #0e0e0e;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  /* ============ PAGINATION ============ */
+
+  & .swiper-pagination-bullet {
+    padding: 10px;
+    opacity: 0.5;
+    outline: 1px solid #0e0e0e;
+    transition: background-color 150ms linear;
+  }
+
+  & .swiper-pagination-bullet:hover {
+    background-color: white;
+  }
+
+  & .swiper-pagination-bullet-active {
+    opacity: 0.8;
+    background-color: white;
+  }
+
+  @media (max-width: 768px) {
+    & .swiper-button-prev,
+    .swiper-button-next {
+      display: none !important;
+    }
+
+    & .swiper-pagination-bullet {
+      padding: 6px;
+    }
+  }
+`;
+
+export const StyledSliderContent = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  padding: 65px;
+  color: white;
+  text-shadow: 1px 1px 15px #272727;
+
+  & h2 {
+    font-size: 42px;
+  }
+
+  & p {
+    font-size: 20px;
+  }
+
+  & button {
+    font-size: 24px;
+  }
+
+  @media (max-width: 500px) {
+    padding: 15px;
+  }
 `;
