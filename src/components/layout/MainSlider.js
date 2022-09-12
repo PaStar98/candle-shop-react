@@ -4,8 +4,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import { StyledButton } from './styled/Button.styled';
-import { StyledSlider, StyledSliderContent } from './styled/MainSlider.styled';
+import { StyledButton } from '../styled/styled-layout/Button.styled';
+import {
+  StyledSlider,
+  StyledSliderContent,
+} from '../styled/styled-layout/MainSlider.styled';
 
 export default function MainSlider() {
   return (

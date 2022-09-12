@@ -1,4 +1,9 @@
 import { NavLink } from 'react-router-dom';
+import {
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaShoppingCart,
+} from 'react-icons/fa';
 
 import {
   StyledHeader,
@@ -6,7 +11,7 @@ import {
   StyledNavElements,
   StyledLogo,
   StyledSocials,
-} from './styled/styled-layout/Header.styled';
+} from '../styled/styled-layout/Header.styled';
 
 export default function Header() {
   return (
@@ -37,11 +42,19 @@ export default function Header() {
         </StyledNavElements>
 
         <StyledSocials>
-          <span>IG</span>
-          <span>FB</span>
-          <span>Cart</span>
+          <span>
+            <FaInstagramSquare />
+          </span>
+          <span>
+            <FaFacebookSquare />
+          </span>
+          <span>
+            <FaShoppingCart />
+          </span>
         </StyledSocials>
       </StyledNav>
     </StyledHeader>
   );
 }
+
+/* todo: make list item in StyledSocials instead of span */

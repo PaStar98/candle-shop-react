@@ -14,7 +14,8 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background-color: #eee;
+    background-color: #dadada;
+    margin-top: 100vh; // prevent display content on MainSlider content
   }
 
   code {

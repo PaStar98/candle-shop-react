@@ -107,14 +107,6 @@ export const StyledSliderContent = styled.div`
 
   & button {
     font-size: 22px;
-    opacity: 0.85;
-    letter-spacing: 1px;
-    transition: opacity 150ms linear;
-    text-shadow: 1px 1px 2px #666;
-  }
-
-  & button:hover {
-    opacity: 1;
   }
 
   @media (max-width: 500px) {
