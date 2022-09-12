@@ -27,7 +27,7 @@ export default function MainSlider() {
               Polub nasz fanpage na Facebook i zgarnij nagrody! Szczegóły
               konkursu podane w wyróżnionym poście!
             </p>
-            <StyledButton>ZOBACZ</StyledButton>
+            <StyledButton>Zobacz</StyledButton>
           </StyledSliderContent>
         </SwiperSlide>
 
@@ -37,7 +37,7 @@ export default function MainSlider() {
             <p>
               Odwiedź nasz sklep i zobacz naszą ofertę - nowe świece już są!
             </p>
-            <StyledButton>ZOBACZ</StyledButton>
+            <StyledButton>Zobacz</StyledButton>
           </StyledSliderContent>
         </SwiperSlide>
 
@@ -48,7 +48,7 @@ export default function MainSlider() {
               Odwiedź nasz Instagram, zacznij go obserwować i bądź na czasie z
               naszą ofertą!
             </p>
-            <StyledButton>ZOBACZ</StyledButton>
+            <StyledButton>Zobacz</StyledButton>
           </StyledSliderContent>
         </SwiperSlide>
       </Swiper>

@@ -15,9 +15,6 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
 
     background-color: #eee;
-    
-  //  temp styles
-    height: 150vh;
   }
 
   code {
