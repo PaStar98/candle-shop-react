@@ -14,10 +14,10 @@ const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    background-color: rgb(255, 225, 185);
-
-    /* temp styles */
-    height: 200vh;
+    background-color: #eee;
+    
+  //  temp styles
+    height: 150vh;
   }
 
   code {
