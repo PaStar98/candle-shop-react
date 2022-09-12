@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 
 import { StyledButton } from './styled/Button.styled';
 import { StyledSlider } from './styled/MainSlider.styled';
-
+// test
 export default function MainSlider() {
   return (
     <StyledSlider>
