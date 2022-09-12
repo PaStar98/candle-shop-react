@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 
 import { StyledButton } from './styled/Button.styled';
 import { StyledSlider, StyledSliderContent } from './styled/MainSlider.styled';
-// test
+
 export default function MainSlider() {
   return (
     <StyledSlider>
@@ -35,7 +35,7 @@ export default function MainSlider() {
           <StyledSliderContent>
             <h2>Promocje - czas start!</h2>
             <p>
-              Odwiedź nasz sklep i zobacz naszą oferte - nowe garunki już są!
+              Odwiedź nasz sklep i zobacz naszą ofertę - nowe świece już są!
             </p>
             <StyledButton>ZOBACZ</StyledButton>
           </StyledSliderContent>
