@@ -32,11 +32,13 @@ export const StyledBanner = styled.div`
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  gap: 15px;
-  padding: 15px;
+  gap: 10px;
+  padding: 50px;
   color: white;
   text-shadow: 1px 1px 3px #666;
   border-radius: 15px;
+  cursor: pointer;
+  transition: transform 200ms linear;
 
   background-repeat: no-repeat;
   background-position: center;
@@ -58,6 +60,10 @@ export const StyledBanner = styled.div`
 
   & button {
     font-size: 18px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
   }
 `;
 
@@ -90,16 +96,58 @@ export const StyledCart = styled.div`
   & button {
     font-size: 12px;
     padding: 5px 10px;
+    letter-spacing: normal;
   }
 `;
 
 export const StyledCategories = styled.div`
-  margin: 10px 0;
+  margin-top: 25px;
 
   & .container-categories {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    margin-top: 10px;
+  }
+`;
+
+export const StyledCategoryItem = styled.div`
+  cursor: pointer;
+  text-align: center;
+
+  & .img-container {
+    text-align: center;
+    height: fit-content;
+
+    & img {
+      object-fit: contain;
+      width: 60%;
+      border-radius: 15px;
+    }
+  }
+
+  & div {
     display: flex;
-    flex-flow: row wrap;
-    gap: 15px;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5px;
+    padding: 5px;
+    transition: color 100ms linear, background-color 100ms linear;
+    height: 100%;
+  }
+
+  & h3 {
+    font-size: 16px;
+  }
+
+  & div:hover {
+    color: white;
+    background-color: #ff3c3c;
+
+    & svg {
+      color: white !important;
+    }
   }
 `;
 

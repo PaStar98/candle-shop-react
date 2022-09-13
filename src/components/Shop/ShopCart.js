@@ -4,7 +4,7 @@ import { StyledCart } from '../styled/styled-shop/Shop.styled';
 import { StyledCard } from '../styled/styled-layout/Card.styled';
 import { StyledButton } from '../styled/styled-layout/Button.styled';
 
-export default function ShopCart() {
+export const ShopCart = () => {
   return (
     <StyledCard minHeight={'600px'}>
       <StyledCart>
@@ -27,4 +27,4 @@ export default function ShopCart() {
       </StyledCart>
     </StyledCard>
   );
-}
+};

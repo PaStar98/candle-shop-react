@@ -10,7 +10,7 @@ import {
   StyledSliderContent,
 } from '../styled/styled-layout/MainSlider.styled';
 
-export default function MainSlider() {
+export const MainSlider = () => {
   return (
     <StyledSlider>
       <Swiper
@@ -57,6 +57,6 @@ export default function MainSlider() {
       </Swiper>
     </StyledSlider>
   );
-}
+};
 
 /* fixme: dummy code above, need to write this in proper way */

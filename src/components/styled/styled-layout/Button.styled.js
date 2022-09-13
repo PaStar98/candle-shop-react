@@ -14,7 +14,7 @@ export const StyledButton = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
-  transition: opacity, background-color 150ms linear;
+  transition: opacity 150ms linear, background-color 150ms linear;
 
   &:hover {
     opacity: 1;

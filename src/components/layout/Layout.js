@@ -1,9 +1,9 @@
 import { Fragment } from 'react';
 
-import Header from './Header';
-import MainSlider from './MainSlider';
+import { Header } from './Header';
+import { MainSlider } from './MainSlider';
 
-export default function Layout({ children }) {
+export const Layout = ({ children }) => {
   return (
     <Fragment>
       <Header />
@@ -11,4 +11,4 @@ export default function Layout({ children }) {
       <main>{children}</main>
     </Fragment>
   );
-}
+};

@@ -13,7 +13,7 @@ import {
   StyledSocials,
 } from '../styled/styled-layout/Header.styled';
 
-export default function Header() {
+export const Header = () => {
   return (
     <StyledHeader>
       <StyledNav>
@@ -55,6 +55,6 @@ export default function Header() {
       </StyledNav>
     </StyledHeader>
   );
-}
+};
 
 /* todo: make list item in StyledSocials instead of span */
