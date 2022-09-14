@@ -102,11 +102,13 @@ export const StyledCart = styled.div`
 
 export const StyledCategories = styled.div`
   margin-top: 25px;
+  text-align: center;
 
   & .container-categories {
     display: grid;
     grid-gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(75px, 100px));
+    justify-content: center;
     margin-top: 10px;
   }
 `;
@@ -121,7 +123,7 @@ export const StyledCategoryItem = styled.div`
 
     & img {
       object-fit: contain;
-      width: 60%;
+      width: 30%;
       border-radius: 15px;
     }
   }
@@ -138,7 +140,7 @@ export const StyledCategoryItem = styled.div`
   }
 
   & h3 {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   & div:hover {

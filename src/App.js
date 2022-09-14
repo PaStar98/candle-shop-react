@@ -4,7 +4,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import { ShopPage } from './pages/Shop.page';
 
 import GlobalStyles from './components/styled/Global';
-import { Layout } from './components/layout/Layout';
+import { Layout } from './components/Layout/Layout';
 
 export const App = () => {
   return (

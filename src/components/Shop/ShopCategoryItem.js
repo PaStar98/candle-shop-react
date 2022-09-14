@@ -12,7 +12,7 @@ export const ShopCategoryItem = ({ category, img }) => {
           <img src={img} alt="temp" />
         </div>
         <h3>{category}</h3>
-        <FaArrowCircleDown color={'#ff3c3c'} size={25} />
+        <FaArrowCircleDown color={'#ff3c3c'} size={18} />
       </StyledCard>
     </StyledCategoryItem>
   );
