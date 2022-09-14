@@ -123,7 +123,7 @@ export const StyledCategoryItem = styled.div`
 
     & img {
       object-fit: contain;
-      width: 30%;
+      width: 45%;
       border-radius: 15px;
     }
   }
@@ -143,7 +143,8 @@ export const StyledCategoryItem = styled.div`
     font-size: 15px;
   }
 
-  & div:hover {
+  & div:hover,
+  .active {
     color: white;
     background-color: #ff3c3c;
 

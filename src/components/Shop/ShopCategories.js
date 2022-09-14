@@ -7,11 +7,14 @@ export const ShopCategories = ({ categoriesList }) => {
       <b>Kategorie: </b>
       <div className={'container-categories'}>
         {categoriesList.map((el) => (
-          <ShopCategoryItem key={el.id} category={el.category} img={el.img} />
+          <ShopCategoryItem
+            key={el.id}
+            id={el.id}
+            category={el.category}
+            img={el.img}
+          />
         ))}
       </div>
     </StyledCategories>
   );
 };
-
-/* todo: set active class for last category item was clicked, amen */
