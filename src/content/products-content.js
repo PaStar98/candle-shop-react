@@ -12,3 +12,5 @@ export const candlesData = [
     img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLdLOPQ3NCC0TEZl6C6CW0zZgSh3uhGPr835HSiN-Hw1oiJowLPJthFrxmIe7IBvtRdOw&usqp=CAU',
   },
 ];
+
+export const perfumeOilData = [{}];

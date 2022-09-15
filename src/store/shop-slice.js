@@ -2,15 +2,15 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const shopSlice = createSlice({
   name: 'shop',
-  initialState: { whichID: '' },
+  initialState: { currentCategoryID: '' },
   reducers: {
-    getID(state, action) {
+    setCurrentCategory(state, action) {
       const id = action.payload;
-      state.whichID = id;
+      state.currentCategoryID = id;
       console.log(id);
     },
   },
 });
 
-export const { getID } = shopSlice.actions;
+export const { setCurrentCategory } = shopSlice.actions;
 export default shopSlice.reducer;

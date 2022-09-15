@@ -7,12 +7,7 @@ export const ShopCategories = ({ categoriesList }) => {
       <b>Kategorie: </b>
       <div className={'container-categories'}>
         {categoriesList.map((el) => (
-          <ShopCategoryItem
-            key={el.id}
-            id={el.id}
-            category={el.category}
-            img={el.img}
-          />
+          <ShopCategoryItem key={el.id} data={el} />
         ))}
       </div>
     </StyledCategories>
