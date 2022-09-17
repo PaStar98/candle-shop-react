@@ -8,11 +8,6 @@ export const StyledShop = styled.section`
   padding: 25px;
   min-height: 600px;
 
-  & .products-side,
-  .cart-side {
-    border: 1px dotted black;
-  }
-
   & .products-side {
     flex: 3;
   }
@@ -154,4 +149,43 @@ export const StyledCategoryItem = styled.div`
   }
 `;
 
-export const StyledProducts = styled.ul``;
+export const StyledProducts = styled.div`
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: center;
+  margin-top: 35px;
+`;
+
+export const StyledProductItem = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+
+  & figure {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 20px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  & .price {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    button {
+      border-radius: 50%;
+      padding: 5px 10px;
+      font-size: 15px;
+    }
+  }
+`;

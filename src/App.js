@@ -13,7 +13,7 @@ export const App = () => {
       <Layout>
         <Switch>
           <Route exact path={'/'}>
-            <Redirect to={'/shop'} />
+            <Redirect to={'/shop/candles'} />
           </Route>
 
           <Route path={'/shop'}>
