@@ -34,11 +34,12 @@ export const StyledBanner = styled.div`
   border-radius: 15px;
   cursor: pointer;
   transition: transform 200ms linear;
+  min-height: 210px;
 
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: right;
   background-size: cover;
-  background-image: url('https://img1.goodfon.com/wallpaper/nbig/a/33/window-merry-christmas-xmas-3371.jpg');
+  background-image: url('https://image.shutterstock.com/image-photo/burning-golden-candles-on-black-260nw-1547240795.jpg');
 
   & h5 {
     font-size: 24px;
@@ -66,7 +67,36 @@ export const StyledCart = styled.div`
   display: flex;
   flex-flow: column nowrap;
   height: 600px;
-  gap: 25px;
+
+  & .products-container {
+    overflow: auto;
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 11px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px #aaa;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #ff5d5d;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ee4c4c;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  }
 
   & footer {
     margin-top: auto;
@@ -86,12 +116,55 @@ export const StyledCart = styled.div`
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    margin-top: 25px;
   }
 
   & button {
     font-size: 12px;
     padding: 5px 10px;
     letter-spacing: normal;
+  }
+`;
+
+export const StyledCartItem = styled.li`
+  display: flex;
+  flex-flow: row wrap;
+  border-bottom: 1px solid #aaa;
+  padding: 25px 0;
+
+  .image-container {
+    flex: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .product-data {
+    flex: 3;
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: 13px;
+  }
+
+  .product-quantity-chooser {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    margin-top: 10px;
+
+    span {
+      padding: 0 10px;
+      outline: 1px solid #aaa;
+      box-shadow: inset 0 0 2px #aaa;
+      border-radius: 5px;
+    }
+  }
+
+  .product-price {
+    flex: 1;
+    font-size: 13px;
   }
 `;
 

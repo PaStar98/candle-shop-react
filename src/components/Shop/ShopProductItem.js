@@ -1,10 +1,18 @@
+import { useDispatch } from 'react-redux';
+import { cartProductAdd } from '../../store/shop-slice';
+
 import { StyledProductItem } from '../styled/styled-shop/Shop.styled';
 import { StyledButton } from '../styled/styled-layout/Button.styled';
 import { StyledCard } from '../styled/styled-layout/Card.styled';
 
 export const ShopProductItem = ({ data }) => {
-  const { name, price, img } = data;
+  const { id, name, price, img } = data;
 
+  const dispatch = useDispatch();
+
+  const addItemHandler = () => {
+    dispatch(cartProductAdd({ id, name, price, img }));
+  };
   return (
     <StyledCard>
       <StyledProductItem>
@@ -16,7 +24,7 @@ export const ShopProductItem = ({ data }) => {
           <p>
             Cena: <b>{price} zł</b>
           </p>
-          <StyledButton>+</StyledButton>
+          <StyledButton onClick={addItemHandler}>+</StyledButton>
         </div>
       </StyledProductItem>
     </StyledCard>
