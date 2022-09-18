@@ -66,10 +66,13 @@ export const StyledBanner = styled.div`
 export const StyledCart = styled.div`
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
   height: 600px;
 
   & .products-container {
     overflow: auto;
+    height: 100%;
+    justify-self: flex-start;
 
     /* width */
     ::-webkit-scrollbar {
@@ -98,8 +101,12 @@ export const StyledCart = styled.div`
     }
   }
 
+  & header {
+    margin-bottom: 25px;
+  }
+
   & footer {
-    margin-top: auto;
+    //margin-top: 25px;
 
     & h5 {
       font-size: 20px;
@@ -116,7 +123,6 @@ export const StyledCart = styled.div`
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    margin-top: 25px;
   }
 
   & button {

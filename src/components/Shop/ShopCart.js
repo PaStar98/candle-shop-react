@@ -7,7 +7,8 @@ import { StyledCard } from '../styled/styled-layout/Card.styled';
 import { StyledButton } from '../styled/styled-layout/Button.styled';
 
 export const ShopCart = () => {
-  const cartList = useSelector((state) => state.shop.items);
+  const cartItems = useSelector((state) => state.shop.items);
+  const totalAmount = useSelector((state) => state.shop.totalAmount);
 
   return (
     <StyledCard minHeight={'600px'}>
@@ -18,11 +19,14 @@ export const ShopCart = () => {
         </header>
         <div className={'products-container'}>
           <ul>
-            {cartList.map((el) => (
+            {cartItems.map((el) => (
               <ShopCartItem
                 key={el.id}
+                id={el.id}
                 name={el.name}
                 price={el.price}
+                totalPrice={el.totalPrice}
+                quantity={el.quantity}
                 img={el.img}
               />
             ))}
@@ -30,7 +34,7 @@ export const ShopCart = () => {
         </div>
         <footer className={'cart-flex'}>
           <h5>
-            Suma: <span>2137</span>
+            Suma: <span>{totalAmount.toFixed(2)}</span>
           </h5>
           <StyledButton>Zapłać</StyledButton>
         </footer>
