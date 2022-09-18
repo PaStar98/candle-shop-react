@@ -60,6 +60,7 @@ export const StyledFind = styled.div`
     align-items: center;
     font-size: 16px;
     margin-left: 50px;
+    color: white;
   }
 
   @media (max-width: 768px) {

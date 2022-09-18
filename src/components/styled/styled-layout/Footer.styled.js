@@ -1,18 +1,33 @@
 import styled from 'styled-components';
 
 export const StyledFooter = styled.footer`
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  margin-top: 100px;
+  min-height: 600px;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('https://images3.alphacoders.com/199/199305.jpg');
+
   & .contact-container {
     display: flex;
     gap: 50px;
     flex-flow: row wrap;
     justify-content: space-between;
-    margin: 25px 75px 0;
+    margin: 75px 75px 0;
+    opacity: 0.9;
+
+    @media (max-width: 768px) {
+      margin: 75px 5px 0;
+    }
   }
 
   & .copyright {
     background-color: #222;
     opacity: 0.9;
-    margin-top: 150px;
     color: white;
     letter-spacing: 1px;
     padding: 5px;

@@ -4,7 +4,6 @@ import { cartProductAdd, cartProductRemove } from '../../store/shop-slice';
 import { FaMinus, FaPlus } from 'react-icons/fa';
 
 import { StyledCartItem } from '../styled/styled-shop/Shop.styled';
-import { StyledButton } from '../styled/styled-layout/Button.styled';
 
 export const ShopCartItem = ({
   id,
