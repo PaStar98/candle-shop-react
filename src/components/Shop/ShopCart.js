@@ -12,7 +12,7 @@ export const ShopCart = () => {
   const totalAmount = useSelector((state) => state.shop.totalAmount);
 
   return (
-    <StyledCard minHeight={'600px'} className="cart-container">
+    <StyledCard minHeight={'600px'}>
       <StyledCart>
         <header className={'cart-flex'}>
           <FaShoppingCart size={30} color={'#ff5d5d'} />
@@ -35,7 +35,10 @@ export const ShopCart = () => {
         </div>
         <footer className={'cart-flex'}>
           <h5>
-            Suma: <span>{totalAmount.toFixed(2)}</span>
+            Suma:{' '}
+            <span>
+              {totalAmount.toFixed(2).toString().replace('.', ',')} zł
+            </span>
           </h5>
           <StyledButton>Zapłać</StyledButton>
         </footer>
@@ -45,13 +48,13 @@ export const ShopCart = () => {
 };
 
 /* Overlay for mobile width */
-export const ShopCartModal = () => {
+export const ShopCartModal = ({ closeModal }) => {
   const cartItems = useSelector((state) => state.shop.items);
   const totalAmount = useSelector((state) => state.shop.totalAmount);
 
   return (
     <StyledCartModal>
-      <div className="backdrop"></div>
+      <div className="backdrop" onClick={closeModal} />
       <StyledCard className="cart-modal">
         <header className={'cart-flex'}>
           <FaShoppingCart size={30} color={'#ff5d5d'} />
@@ -74,7 +77,10 @@ export const ShopCartModal = () => {
         </div>
         <footer className={'cart-flex'}>
           <h5>
-            Suma: <span>{totalAmount.toFixed(2)}</span>
+            Suma:{' '}
+            <span>
+              {totalAmount.toFixed(2).toString().replace('.', ',')} zł
+            </span>
           </h5>
           <StyledButton>Zapłać</StyledButton>
         </footer>

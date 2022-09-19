@@ -6,6 +6,7 @@ const shopSlice = createSlice({
     items: [],
     totalAmount: 0,
     currentCategoryID: '',
+    isCartModal: false,
   },
   reducers: {
     cartProductAdd(state, action) {
@@ -56,9 +57,23 @@ const shopSlice = createSlice({
       state.currentCategoryID = id;
       console.log(id);
     },
+
+    enableCartModal(state) {
+      state.isCartModal = true;
+      console.log('isCartModal working');
+    },
+
+    disableCartModal(state) {
+      state.isCartModal = false;
+    },
   },
 });
 
-export const { cartProductAdd, setCurrentCategory, cartProductRemove } =
-  shopSlice.actions;
+export const {
+  cartProductAdd,
+  setCurrentCategory,
+  cartProductRemove,
+  enableCartModal,
+  disableCartModal,
+} = shopSlice.actions;
 export default shopSlice.reducer;

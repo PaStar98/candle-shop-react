@@ -14,11 +14,10 @@ export const StyledShop = styled.section`
 
   & .cart-side {
     flex: 3;
-  }
-
-  @media (max-width: 900px) {
-    & .cart-container {
-      display: none;
+    @media (max-width: 900px) {
+      & {
+        display: none;
+      }
     }
   }
 `;
@@ -107,6 +106,8 @@ export const StyledCart = styled.div`
   }
 
   & footer {
+    margin-top: 15px;
+
     & h5 {
       font-size: 20px;
 

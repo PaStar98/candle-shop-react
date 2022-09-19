@@ -22,7 +22,7 @@ export const ShopProductItem = ({ data }) => {
         </figure>
         <div className={'price'}>
           <p>
-            Cena: <b>{price.toFixed(2)} zł</b>
+            Cena: <b>{price.toFixed(2).toString().replace('.', ',')} zł</b>
           </p>
           <StyledButton onClick={addItemHandler}>+</StyledButton>
         </div>

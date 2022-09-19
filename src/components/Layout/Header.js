@@ -1,14 +1,15 @@
-import { categoriesContent } from '../../content/categories-content';
-import { NavLink } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import { useDispatch } from 'react-redux';
 import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaShoppingCart,
 } from 'react-icons/fa';
 
-import { useDispatch } from 'react-redux';
-import { setCurrentCategory } from '../../store/shop-slice';
+import { categoriesContent } from '../../content/categories-content';
+import { NavLink } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+
+import { setCurrentCategory, enableCartModal } from '../../store/shop-slice';
 
 import {
   StyledHeader,
@@ -25,6 +26,10 @@ export const Header = () => {
   const setFirstCategoryActive = () => {
     const firstCategoryID = categoriesContent[0].id;
     dispatch(setCurrentCategory(firstCategoryID));
+  };
+
+  const openCartModalHandler = () => {
+    dispatch(enableCartModal());
   };
 
   return (
@@ -82,6 +87,7 @@ export const Header = () => {
               size="25"
               cursor="pointer"
               opacity="0.85"
+              onClick={openCartModalHandler}
             />
           </span>
         </StyledSocials>

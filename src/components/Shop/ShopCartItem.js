@@ -48,7 +48,9 @@ export const ShopCartItem = ({
         </div>
       </div>
 
-      <span className={'product-price'}>{totalPrice.toFixed(2)} zł</span>
+      <span className={'product-price'}>
+        {totalPrice.toFixed(2).toString().replace('.', ',')} zł
+      </span>
     </StyledCartItem>
   );
 };

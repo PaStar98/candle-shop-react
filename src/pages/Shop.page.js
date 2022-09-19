@@ -1,3 +1,5 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { disableCartModal } from '../store/shop-slice';
 import { Route } from 'react-router-dom';
 
 import { bannerContent } from '../content/banner-content';
@@ -9,6 +11,13 @@ import { ShopCategories } from '../components/Shop/ShopCategories';
 import { ShopProducts } from '../components/Shop/ShopProducts';
 
 export const ShopPage = () => {
+  const dispatch = useDispatch();
+  const isCartModal = useSelector((state) => state.shop.isCartModal);
+
+  const closeCartModalHandler = () => {
+    dispatch(disableCartModal());
+  };
+
   return (
     <StyledShop id="shop">
       <div className={'products-side'}>
@@ -20,8 +29,8 @@ export const ShopPage = () => {
       </div>
       <div className={'cart-side'}>
         <ShopCart />
-        <ShopCartModal />
       </div>
+      {isCartModal && <ShopCartModal closeModal={closeCartModalHandler} />}
     </StyledShop>
   );
 };
