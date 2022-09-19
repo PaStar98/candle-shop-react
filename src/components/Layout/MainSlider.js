@@ -12,7 +12,7 @@ import {
 
 export const MainSlider = () => {
   return (
-    <StyledSlider>
+    <StyledSlider id={'home'}>
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 5000 }}

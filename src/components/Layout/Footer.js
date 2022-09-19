@@ -4,7 +4,7 @@ import { ContactFind } from './ContactFind';
 
 export const Footer = () => {
   return (
-    <StyledFooter>
+    <StyledFooter id="contact">
       <div className={'contact-container'}>
         <ContactForm />
         <ContactFind />

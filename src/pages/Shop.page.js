@@ -10,7 +10,7 @@ import { ShopProducts } from '../components/Shop/ShopProducts';
 
 export const ShopPage = () => {
   return (
-    <StyledShop>
+    <StyledShop id="shop">
       <div className={'products-side'}>
         <ShopBanner banner={bannerContent} />
         <ShopCategories categoriesList={categoriesContent} />

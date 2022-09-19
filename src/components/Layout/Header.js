@@ -1,9 +1,16 @@
+import { useEffect } from 'react';
+
+import { categoriesContent } from '../../content/categories-content';
 import { NavLink } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
 import {
   FaFacebookSquare,
   FaInstagramSquare,
   FaShoppingCart,
 } from 'react-icons/fa';
+
+import { useDispatch } from 'react-redux';
+import { setCurrentCategory } from '../../store/shop-slice';
 
 import {
   StyledHeader,
@@ -14,6 +21,14 @@ import {
 } from '../styled/styled-layout/Header.styled';
 
 export const Header = () => {
+  const dispatch = useDispatch();
+
+  /* SET FIRST CATEGORY ACTIVE AFTER USER'S NAV SHOP CLICK */
+  const setFirstCategoryActive = () => {
+    const firstCategoryID = categoriesContent[0].id;
+    dispatch(setCurrentCategory(firstCategoryID));
+  };
+
   return (
     <StyledHeader>
       <StyledNav>
@@ -25,10 +40,12 @@ export const Header = () => {
 
         <StyledNavElements>
           <li>
-            <NavLink to={'/'}>Home</NavLink>
+            <Link to={'/#home'}>Home</Link>
           </li>
           <li>
-            <NavLink to={'/shop/candles'}>Sklep</NavLink>
+            <Link to={`/shop/candles#shop`} onClick={setFirstCategoryActive}>
+              Sklep
+            </Link>
           </li>
           <li>
             <NavLink to={'/info'}>Informacje</NavLink>
@@ -37,7 +54,7 @@ export const Header = () => {
             <NavLink to={'/about'}>O nas</NavLink>
           </li>
           <li>
-            <NavLink to={'/contact'}>Kontakt</NavLink>
+            <Link to={'#contact'}>Kontakt</Link>
           </li>
         </StyledNavElements>
 

@@ -1,7 +1,9 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { FaArrowCircleDown } from 'react-icons/fa';
 
+import { categoriesContent } from '../../content/categories-content';
 import { setCurrentCategory } from '../../store/shop-slice';
 import { StyledCard } from '../styled/styled-layout/Card.styled';
 import { StyledCategoryItem } from '../styled/styled-shop/Shop.styled';
@@ -12,6 +14,12 @@ export const ShopCategoryItem = ({ data }) => {
 
   const dispatch = useDispatch();
   const clickedElementID = useSelector((state) => state.shop.currentCategoryID);
+
+  /* SET FIRST CATEGORY AS ACTIVE */
+  useEffect(() => {
+    const firstCategory = categoriesContent[0].id;
+    dispatch(setCurrentCategory(firstCategory));
+  }, [dispatch]);
 
   /* SETTING ACTIVE CLASS, CHANGE ROUTE */
   const clickHandler = () => {
