@@ -17,7 +17,7 @@ export const App = () => {
             <Redirect to={'/shop/candles'} />
           </Route>
 
-          <Route path={'/shop'}>
+          <Route path={'/shop/candles'}>
             <ShopPage />
           </Route>
 
