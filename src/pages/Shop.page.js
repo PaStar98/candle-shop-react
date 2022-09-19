@@ -4,7 +4,7 @@ import { bannerContent } from '../content/banner-content';
 import { categoriesContent } from '../content/categories-content';
 import { StyledShop } from '../components/styled/styled-shop/Shop.styled';
 import { ShopBanner } from '../components/Shop/ShopBanner';
-import { ShopCart } from '../components/Shop/ShopCart';
+import { ShopCart, ShopCartModal } from '../components/Shop/ShopCart';
 import { ShopCategories } from '../components/Shop/ShopCategories';
 import { ShopProducts } from '../components/Shop/ShopProducts';
 
@@ -20,6 +20,7 @@ export const ShopPage = () => {
       </div>
       <div className={'cart-side'}>
         <ShopCart />
+        <ShopCartModal />
       </div>
     </StyledShop>
   );

@@ -9,9 +9,17 @@ export const StyledHeader = styled.header`
   background-color: rgba(0, 0, 0, 0.65);
   color: white;
   z-index: 1000;
+  transition: background-color 100ms ease-out;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
   @media (max-width: 768px) {
     padding: 5px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.65);
+    }
   }
 `;
 

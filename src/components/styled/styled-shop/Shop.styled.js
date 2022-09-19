@@ -17,7 +17,7 @@ export const StyledShop = styled.section`
   }
 
   @media (max-width: 900px) {
-    & .cart-side {
+    & .cart-container {
       display: none;
     }
   }
@@ -73,6 +73,7 @@ export const StyledCart = styled.div`
     overflow: auto;
     height: 100%;
     justify-self: flex-start;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
 
     /* width */
     ::-webkit-scrollbar {
@@ -106,8 +107,6 @@ export const StyledCart = styled.div`
   }
 
   & footer {
-    //margin-top: 25px;
-
     & h5 {
       font-size: 20px;
 
@@ -127,6 +126,99 @@ export const StyledCart = styled.div`
 
   & button {
     font-size: 12px;
+    padding: 5px 10px;
+    letter-spacing: normal;
+  }
+`;
+
+export const StyledCartModal = styled.div`
+  @media (min-width: 900px) {
+    display: none;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  .cart-modal {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    background-color: white;
+    position: fixed;
+    top: 20vh;
+    left: 10%;
+    width: 80%;
+    z-index: 100;
+    overflow: hidden;
+    min-height: 250px;
+  }
+
+  & .cart-flex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .products-container {
+    overflow: auto;
+    height: 60vh;
+    justify-self: flex-start;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+    /* width */
+    ::-webkit-scrollbar {
+      width: 11px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px #aaa;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+      background: #ff5d5d;
+      border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+      background: #ee4c4c;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+  }
+
+  & header {
+    margin-bottom: 15px;
+  }
+
+  & footer {
+    margin-top: 15px;
+
+    & h5 {
+      font-size: 20px;
+
+      & span {
+        font-size: 16px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  & button {
+    font-size: 14px;
     padding: 5px 10px;
     letter-spacing: normal;
   }
