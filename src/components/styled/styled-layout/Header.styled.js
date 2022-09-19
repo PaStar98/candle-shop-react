@@ -9,6 +9,10 @@ export const StyledHeader = styled.header`
   background-color: rgba(0, 0, 0, 0.65);
   color: white;
   z-index: 1000;
+
+  @media (max-width: 768px) {
+    padding: 5px;
+  }
 `;
 
 export const StyledNav = styled.nav`
@@ -39,6 +43,7 @@ export const StyledNavElements = styled.ul`
 
 export const StyledLogo = styled.h1`
   font-size: 32px;
+  cursor: default;
 
   & span {
     color: #ff5d5d;
@@ -48,7 +53,19 @@ export const StyledLogo = styled.h1`
 export const StyledSocials = styled.div`
   display: flex;
   flex-flow: row nowrap;
-  gap: 15px;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    margin-top: 7px;
+  }
+
+  .social {
+    transition: opacity 50ms linear;
+  }
+
+  .social:hover {
+    opacity: 1;
+  }
 `;
 
 export const StyledSlider = styled.div``;

@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-
 import { categoriesContent } from '../../content/categories-content';
 import { NavLink } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -60,13 +58,31 @@ export const Header = () => {
 
         <StyledSocials>
           <span>
-            <FaInstagramSquare />
+            <FaInstagramSquare
+              className="social"
+              color="#ff5d5d"
+              size="25"
+              cursor="pointer"
+              opacity="0.85"
+            />
           </span>
           <span>
-            <FaFacebookSquare />
+            <FaFacebookSquare
+              className="social"
+              color="#ff5d5d"
+              size="25"
+              cursor="pointer"
+              opacity="0.85"
+            />
           </span>
           <span>
-            <FaShoppingCart />
+            <FaShoppingCart
+              className="social"
+              color="#ff5d5d"
+              size="25"
+              cursor="pointer"
+              opacity="0.85"
+            />
           </span>
         </StyledSocials>
       </StyledNav>

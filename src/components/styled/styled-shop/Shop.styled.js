@@ -4,19 +4,19 @@ export const StyledShop = styled.section`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  gap: 15px;
+  gap: 25px;
   padding: 25px;
   min-height: 600px;
 
   & .products-side {
-    flex: 3;
+    flex: 5;
   }
 
   & .cart-side {
-    flex: 1;
+    flex: 3;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     & .cart-side {
       display: none;
     }
@@ -171,6 +171,10 @@ export const StyledCartItem = styled.li`
   .product-price {
     flex: 1;
     font-size: 13px;
+    font-weight: bold;
+    margin: 0 5px 0 15px;
+    overflow: hidden;
+    white-space: nowrap;
   }
 `;
 
