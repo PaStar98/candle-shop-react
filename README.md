@@ -16,7 +16,7 @@
 ### Screens
 (Project under development, future screens may change)
 <br>
-![image](https://user-images.githubusercontent.com/99507865/191195679-a2a527a6-24a6-4cdf-bf08-f724db0dfb37.png)
+![image](https://user-images.githubusercontent.com/99507865/191198573-f5e967e0-9f4d-469d-beed-c002c6e351d4.png)
 <br>
-![image](https://user-images.githubusercontent.com/99507865/191195790-0eabdf5d-cd2a-48d5-8c05-c24def078879.png)
+![image](https://user-images.githubusercontent.com/99507865/191198802-e944514e-2602-447a-91ad-4de3bb8e2ba1.png)
 
