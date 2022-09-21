@@ -41,6 +41,7 @@ export const StyledNavElements = styled.ul`
   & a {
     color: white;
     text-decoration: none;
+    font-size: 19px;
     transition: color 100ms ease-in;
   }
 
@@ -75,5 +76,3 @@ export const StyledSocials = styled.div`
     opacity: 1;
   }
 `;
-
-export const StyledSlider = styled.div``;

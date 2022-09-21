@@ -112,7 +112,7 @@ export const StyledCart = styled.div`
       font-size: 20px;
 
       & span {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: normal;
       }
     }
@@ -126,7 +126,7 @@ export const StyledCart = styled.div`
   }
 
   & button {
-    font-size: 12px;
+    font-size: 16px;
     padding: 5px 10px;
     letter-spacing: normal;
   }
@@ -244,7 +244,7 @@ export const StyledCartItem = styled.li`
     flex: 3;
     display: flex;
     flex-flow: column nowrap;
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .product-quantity-chooser {
@@ -263,7 +263,7 @@ export const StyledCartItem = styled.li`
 
   .product-price {
     flex: 1;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: bold;
     margin: 0 5px 0 15px;
     overflow: hidden;
@@ -311,7 +311,7 @@ export const StyledCategoryItem = styled.div`
   }
 
   & h3 {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   & div:hover,

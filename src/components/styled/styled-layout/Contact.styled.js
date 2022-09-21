@@ -14,6 +14,8 @@ export const StyledFormContainer = styled.div`
     display: flex;
     flex-flow: column;
     gap: 10px;
+    max-width: 650px;
+    margin: 0 auto;
 
     & input,
     textarea {
