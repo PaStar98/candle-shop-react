@@ -75,7 +75,7 @@ export const ShopCartModal = ({ closeModal }) => {
   };
 
   return (
-    <StyledCartModal openAnimation animation={animation}>
+    <StyledCartModal openAnimation disableAnimation={animation}>
       <div className="backdrop" onClick={closeModal} />
       <StyledCard className="cart-modal">
         <header className={'cart-flex'}>
