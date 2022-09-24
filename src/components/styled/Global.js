@@ -10,7 +10,7 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
-  }
+  } 
 
   body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -26,6 +26,38 @@ const GlobalStyles = createGlobalStyle`
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+  }
+
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%;       
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75); 
+  }
+
+  .animation-fadeinout {
+    animation: fadein 300ms ease-in forwards, fadeout 350ms 5s ease-out forwards !important;
+  }
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeout {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
   }
 `;
 

@@ -6,6 +6,7 @@ import { Layout } from './components/Layout/Layout';
 import { ShopPage } from './pages/Shop.page';
 import { InfoPage } from './pages/Info.page';
 import { AboutPage } from './pages/About.page';
+import { ErrorPopup } from './components/Layout/ErrorModule';
 
 export const App = () => {
   return (
@@ -29,6 +30,7 @@ export const App = () => {
             <AboutPage />
           </Route>
         </Switch>
+        <ErrorPopup msg="Płatności nie są aktualnie obsługiwane!" />
       </Layout>
     </Fragment>
   );

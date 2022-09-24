@@ -137,15 +137,7 @@ export const StyledCartModal = styled.div`
     display: none;
   }
 
-  .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.75);
-  }
+  
 
   .cart-modal {
     display: flex;
