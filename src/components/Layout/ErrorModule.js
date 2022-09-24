@@ -19,6 +19,14 @@ const StyledErrorPopup = styled.div`
   z-index: 100;
   opacity: 0;
 
+  @media (max-width: 768px) {
+    & {
+      bottom: 10%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+    }
+  }
+
   p {
     font-size: 18px;
   }

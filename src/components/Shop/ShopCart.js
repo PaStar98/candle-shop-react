@@ -59,8 +59,17 @@ export const ShopCart = () => {
 
 /* Overlay for mobile width */
 export const ShopCartModal = ({ closeModal }) => {
+  const dispatch = useDispatch();
+  const errorPopup = useSelector((state) => state.ui.errorPopup);
   const cartItems = useSelector((state) => state.shop.items);
   const totalAmount = useSelector((state) => state.shop.totalAmount);
+
+  const errPopupHandler = () => {
+    // dispatch only if class 'animation-fadeinout' is NOT set (ErrorModule.js) //
+    if (!errorPopup) {
+      dispatch(enablePopup());
+    }
+  };
 
   return (
     <StyledCartModal>
@@ -92,7 +101,7 @@ export const ShopCartModal = ({ closeModal }) => {
               {totalAmount.toFixed(2).toString().replace('.', ',')} zł
             </span>
           </h5>
-          <StyledButton>Zapłać</StyledButton>
+          <StyledButton onClick={errPopupHandler}>Zapłać</StyledButton>
         </footer>
       </StyledCard>
     </StyledCartModal>

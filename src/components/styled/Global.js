@@ -39,7 +39,7 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .animation-fadeinout {
-    animation: fadein 300ms ease-in forwards, fadeout 350ms 5s ease-out forwards !important;
+    animation: fadein 300ms ease-in forwards, fadeout 350ms 5s ease-out forwards;
   }
 
   @keyframes fadein {
