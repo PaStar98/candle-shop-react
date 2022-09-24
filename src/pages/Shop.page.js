@@ -1,5 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { disableCartModal } from '../store/shop-slice';
+import { setAnimation } from '../store/ui-slice';
 import { Route } from 'react-router-dom';
 
 import { bannerContent } from '../content/banner-content';
@@ -14,7 +15,10 @@ export const ShopPage = () => {
   const dispatch = useDispatch();
   const isCartModal = useSelector((state) => state.shop.isCartModal);
 
-  const closeCartModalHandler = () => {
+  const closeCartModalHandler = async (ms) => {
+    dispatch(setAnimation()); // fadeout cart modal (mobile view) //
+    await new Promise((r) => setTimeout(r, 350));
+    dispatch(setAnimation());
     dispatch(disableCartModal());
   };
 

@@ -16,7 +16,7 @@ const StyledErrorPopup = styled.div`
   border: 1px solid #666;
   border-radius: 10px;
   padding: 25px;
-  z-index: 100;
+  z-index: 200;
   opacity: 0;
 
   @media (max-width: 768px) {

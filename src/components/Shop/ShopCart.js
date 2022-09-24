@@ -10,9 +10,10 @@ import { StyledButton } from '../styled/styled-layout/Button.styled';
 
 export const ShopCart = () => {
   const dispatch = useDispatch();
-  const errorPopup = useSelector((state) => state.ui.errorPopup);
   const cartItems = useSelector((state) => state.shop.items);
   const totalAmount = useSelector((state) => state.shop.totalAmount);
+
+  const errorPopup = useSelector((state) => state.ui.errorPopup);
 
   const errPopupHandler = () => {
     // dispatch only if class 'animation-fadeinout' is NOT set (ErrorModule.js) //
@@ -60,9 +61,11 @@ export const ShopCart = () => {
 /* Overlay for mobile width */
 export const ShopCartModal = ({ closeModal }) => {
   const dispatch = useDispatch();
-  const errorPopup = useSelector((state) => state.ui.errorPopup);
   const cartItems = useSelector((state) => state.shop.items);
   const totalAmount = useSelector((state) => state.shop.totalAmount);
+
+  const animation = useSelector((state) => state.ui.animation);
+  const errorPopup = useSelector((state) => state.ui.errorPopup);
 
   const errPopupHandler = () => {
     // dispatch only if class 'animation-fadeinout' is NOT set (ErrorModule.js) //
@@ -72,12 +75,12 @@ export const ShopCartModal = ({ closeModal }) => {
   };
 
   return (
-    <StyledCartModal>
+    <StyledCartModal openAnimation animation={animation}>
       <div className="backdrop" onClick={closeModal} />
       <StyledCard className="cart-modal">
         <header className={'cart-flex'}>
           <FaShoppingCart size={30} color={'#ff5d5d'} />
-          <StyledButton>Anuluj</StyledButton>
+          <StyledButton onClick={closeModal}>Anuluj</StyledButton>
         </header>
         <div className={'products-container'}>
           <ul>

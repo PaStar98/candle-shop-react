@@ -133,11 +133,32 @@ export const StyledCart = styled.div`
 `;
 
 export const StyledCartModal = styled.div`
+  z-index: 200;
+  animation: ${(props) => (props.openAnimation ? 'fadein 350ms ease-in' : '')};
+  animation: ${(props) => (props.animation ? 'fadeout 350ms ease-out' : '')};
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeout {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+
   @media (min-width: 900px) {
     display: none;
   }
-
-  
 
   .cart-modal {
     display: flex;
